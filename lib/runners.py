@@ -20,6 +20,7 @@ def _build_script(cmd_def):
         os.write(fh, '\n')
     os.write(fh, cmd_def['cmd'])
     os.write(fh, '\n')
+    os.close(fh)
 
     # ensure that the filepath is executable by the runner process, the default
     # tempfile is 0600 
